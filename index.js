@@ -1,6 +1,14 @@
 var express = require("express");
 var app = express();
 var path = require("path");
+var SolrNode = require("solr-node"); // https://www.npmjs.com/package/solr-node
+
+var client = new SolrNode({
+    host: '192.168.171.201',
+    port: '8989',
+    core: 'CE_OSM',
+    protocol: 'http'
+})
 
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
