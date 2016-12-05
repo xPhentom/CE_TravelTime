@@ -14,3 +14,10 @@ ul li{
 #timeslider{
     margin-top:5px;
 }
+#TimeS{
+    float:left;
+}
+.transportoption{
+    float:left;
+    margin-right: 5px;
+}

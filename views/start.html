@@ -16,20 +16,24 @@
     </div>
     <div class="row">
         <div class="col s10 offset-s1">
-            <div id="mapid"></div>
+            <div id="mapid" ng-click="MapClick()"></div>
             way of transport:
-            <div class="dropdown-button btn" data-activates="dropdown1">By car</div>
-            <ul id='dropdown1' class='dropdown-content'>
-                <li>By foot</li>
-            </ul>
+            <form action="#">
+                <p class="transportoption">
+                    <input name="group1" type="radio" id="Car" checked />
+                    <label for="Car">By car</label>
+                </p>
+                <p class="transportoption">
+                    <input name="group1" type="radio" id="Foot" />
+                    <label for="Foot">By foot</label>
+                </p>
+                <div class="col s8 offset-s1" id="TimeS">
+                    <div class="range-field">
+                        <div id="TimeSlider"></div><br>
+                        <div id="TimeSliderValue"></div> minuts
+                    </div>
+                </div>
         </div>
-    </div>
-    <div class="row" id="timeslider">
-        <div class="col s6 offset-s1">
-            <div class="range-field">
-                <div id="TimeSlider"></div>
-                <div id="TimeSliderValue"></div> minuten
-            </div>
-        </div>
+        </form>
     </div>
     </ng-controller>
